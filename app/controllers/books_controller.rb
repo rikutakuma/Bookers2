@@ -30,6 +30,7 @@ before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
   	@books = Book.new
     @book = Book.find(params[:id])
     @user = @book.user
+    @book_comment = BookComment.new
   end
 
   def edit
